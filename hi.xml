@@ -94,6 +94,9 @@
                             <field name="VAR">distance</field>
                           </block>
                         </value>
+                        <next>
+                          <block type="movement_reverse" id="289"></block>
+                        </next>
                       </block>
                     </next>
                   </block>
