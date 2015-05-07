@@ -95,7 +95,11 @@
                           </block>
                         </value>
                         <next>
-                          <block type="movement_reverse" id="289"></block>
+                          <block type="movement_reverse" id="289">
+                            <next>
+                              <block type="movement_stop" id="306"></block>
+                            </next>
+                          </block>
                         </next>
                       </block>
                     </next>
