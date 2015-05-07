@@ -95,7 +95,70 @@
                           </block>
                         </value>
                         <next>
-                          <block type="movement_reverse" id="289"></block>
+                          <block type="controls_whileUntil" id="307" inline="false">
+                            <field name="MODE">WHILE</field>
+                            <value name="NUMBER">
+                              <block type="logic_compare" id="308" inline="true">
+                                <field name="OP">NEQ</field>
+                                <value name="A">
+                                  <block type="variables_get" id="321">
+                                    <field name="VAR">distance</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="310">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO">
+                              <block type="movement_reverse" id="289">
+                                <next>
+                                  <block type="robot_delay" id="312" inline="true">
+                                    <value name="DELAY">
+                                      <block type="math_number" id="313">
+                                        <field name="NUM">200</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="movement_stop" id="314">
+                                        <next>
+                                          <block type="robot_delay" id="315" inline="true">
+                                            <value name="DELAY">
+                                              <block type="math_number" id="316">
+                                                <field name="NUM">100</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="variables_set" id="317" inline="true">
+                                                <field name="VAR">distance</field>
+                                                <value name="VALUE">
+                                                  <block type="math_arithmetic" id="318" inline="true">
+                                                    <field name="OP">MINUS</field>
+                                                    <value name="A">
+                                                      <block type="variables_get" id="319">
+                                                        <field name="VAR">distance</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="math_number" id="320">
+                                                        <field name="NUM">1</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
                         </next>
                       </block>
                     </next>
