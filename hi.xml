@@ -27,7 +27,7 @@
             </value>
             <next>
               <block type="multimedia_playwav" id="373">
-                <field name="WAV">boop</field>
+                <field name="WAV">poop</field>
                 <next>
                   <block type="movement_stop" id="31">
                     <next>
